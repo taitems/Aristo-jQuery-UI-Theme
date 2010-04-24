@@ -456,7 +456,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-tabs .ui-tabs-panel { display: block; border: 0; padding: 1em 1.4em; background: none; font-size: 12px; border-color: #a8a8a8; border-width: 0px 1px 1px 1px; border-style: solid; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;}
 .ui-tabs .ui-tabs-hide { display: none !important; }
 .ui-tabs .ui-state-default { background: #cccccc url(images/button_bg.png) 0px 0px repeat-x; border-color: #a8a8a8; }
-	.ui-tabs .ui-state-default a { color: #4f4f4f !important; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); }
+.ui-tabs .ui-state-default a { color: #4f4f4f; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); }
 .ui-tabs .ui-state-active { background: #FFFFFF; }
 .ui-tabs .ui-state-hover  { color: #313131; border-color: #9d9d9d; -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0px 0px 8px rgba(212,212,212,1); box-shadow: 0px 0px 8px rgba(212,212,212,1); }
 .ui-tabs .ui-tabs-nav li.ui-state-hover a:hover { color: #313131; }
