@@ -50,9 +50,9 @@
 .ui-widget a { outline: none; }
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Helvetica, Arial, sans-serif; font-size: 1em; }
-.ui-widget-content { border: 1px solid #dddddd; color: #333333; }
+.ui-widget-content { border: 1px solid #dddddd; color: #333333; background: #FFFFFF; }
 .ui-widget-content a { color: #333333; }
-.ui-widget-header { border: 1px solid #8ab0c6; background: #83b0ca url(images/progress_bar.gif) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
+.ui-widget-header { border: 1px solid #8ab0c6; background: #a7cfe6; color: #ffffff; font-weight: bold; }
 .ui-widget-header a { color: #ffffff; }
 
 /* Interaction states
@@ -359,7 +359,6 @@
 }
 /* Button
 ----------------------------------*/
-
 .ui-button { display: inline-block; position: relative; padding: 0; margin-right: .1em; text-decoration: none !important; cursor: pointer; text-align: center; zoom: 1; overflow: visible; border: 0px none; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; } /* the overflow property removes extra width in IE */
 .ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
 button.ui-button-icon-only { width: 2.4em; } /* button elements seem to need a little more width */
@@ -475,6 +474,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-datepicker td span, .ui-datepicker td a { display: block; padding: 2px 3px 3px; text-align: right; text-decoration: none; }
 .ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
 .ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.ui-datepicker-buttonpane  button { background: url(images/button_bg.png) 0px 0px repeat-x !important; color: #4f4f4f !important; border-color: #b6b6b6 !important; font-weight: bold !important; font-size: 12px; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); }
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
 .ui-datepicker .ui-datepicker-calendar a { background: transparent; border: 0px none; }
 .ui-datepicker .ui-datepicker-calendar .ui-state-active { padding: 1px 2px 2px;}
@@ -520,5 +520,5 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 }
 /* Progressbar
 ----------------------------------*/
-.ui-progressbar { height:2em; text-align: left; background: url(images/progress_bar.gif) 0px -50px repeat-x; }
+.ui-progressbar { height: 12px; text-align: left; background: url(images/progress_bar.gif) 0px -14px repeat-x; }
 .ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; background: url(images/progress_bar.gif) 0px 0px repeat-x; }

@@ -16,10 +16,8 @@
 				});
 
 				// Accordion
-				$("#accordion").accordion({
-					header: "h3",
-					autoHeight: false
-				});
+				$(".accordion").accordion({ header: "h3" });
+				$(".accordion").last().accordion("option", "icons", false);
 	
 				// Tabs
 				$('#tabs').tabs();
@@ -50,18 +48,29 @@
 					inline: true
 				});
 				
+				// Multi-date picker
+				$('#multidatepicker').datepicker({
+					numberOfMonths: 3,
+					showButtonPanel: true,
+					inline: true
+				});
+				
 				// Horizontal Slider
 				$('#horizSlider').slider({
 					range: true,
 					values: [17, 67]
 				}).width(500);
 				
-				// Vertical Slider
-				$('#vertSlider').slider({
-					range: true,
-					values: [17, 67],
-					orientation: "vertical"
-				}).height(100);
+				// Vertical Slider				
+				$("#eq > span").each(function() {
+					var value = parseInt($(this).text());
+					$(this).empty().slider({
+						value: value,
+						range: "min",
+						animate: true,
+						orientation: "vertical"
+					});
+				});
 				
 				//hover states on the static widgets
 				$('#dialog_link, ul#icons li').hover(
@@ -70,7 +79,7 @@
 				);
 				
 				// Button
-				$("#button").button();
+				$("#divButton, #linkButton").button();
 				
 				// Icon Buttons
 				$("#leftIconButton").button({
@@ -94,6 +103,11 @@
 				$("#progressbar").progressbar({
 					value: 37
 				}).width(500);
+				$("#animateProgress").click(function(event) {
+					var randNum = Math.random() * 90;
+					$("#progressbar div").animate( { width: randNum+"%" } );
+					event.preventDefault();
+				});
 				
 			});
 		</script>
@@ -104,6 +118,8 @@
 			ul#icons {margin: 0; padding: 0;}
 			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
 			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+			.columnbox { height: 170px; width: 48%; float:left; margin-right: 1%; }
+			#eq span { 	height:120px; float:left; margin:15px 	}
 		</style>	
 	</head>
 	<body>
@@ -121,7 +137,8 @@
 	
 		<!-- Button -->
 		<h2 class="demoHeaders">UI Button</h2>	
-		<div id="button">Button</div>
+		<div id="divButton">&lt;DIV&gt; Button</div>
+		<div id="linkButton">&lt;A&gt; Button</div>
 		
 		<!-- Icon Buttons -->
 		<h2 class="demoHeaders">Icon Buttons</h2>
@@ -142,7 +159,18 @@
 		
 		<!-- Vertical Slider -->
 		<h2 class="demoHeaders">Vertical Slider</h2>
-		<div id="vertSlider"></div>
+		<div class="columnbox">
+			<div id="eq">
+				<span>88</span>
+				<span>77</span>
+				<span>55</span>
+				<span>33</span>
+				<span>40</span>
+				<span>45</span>
+				<span>70</span>
+			</div>
+		</div>
+		<br clear="all" />
 		
 		<!-- Highlight / Error -->
 		<h2 class="demoHeaders">Highlight / Error</h2>
@@ -162,23 +190,35 @@
 		
 		<!-- Accordion -->
 		<h2 class="demoHeaders">Accordion</h2>
-		<div id="accordion">
-			<div>
-				<h3><a href="#">First</a></h3>
+		<div class="columnbox">
+			<div class="accordion">
 				<div>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna. Vivamus eget accumsan mauris. Vivamus justo ligula, blandit et consequat nec, vulputate a elit. Morbi feugiat metus in ante scelerisque a pulvinar quam condimentum. Suspendisse potenti. Pellentesque convallis scelerisque nunc eget dapibus. Pellentesque ut enim justo. Fusce egestas urna sed nulla placerat iaculis. Cras dignissim tincidunt molestie. Suspendisse rutrum dignissim tortor quis mollis. Sed tempor feugiat ligula in imperdiet. Quisque molestie viverra erat in adipiscing. 
+					<h3><a href="#">First</a></h3>
+					<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+				</div>
+				<div>
+					<h3><a href="#">Second</a></h3>
+					<div>Phasellus mattis tincidunt nibh.</div>
+				</div>
+				<div>
+					<h3><a href="#">Third</a></h3>
+					<div>Nam dui erat, auctor a, dignissim quis.</div>
 				</div>
 			</div>
-			<div>
-				<h3><a href="#">Second</a></h3>
+		</div>
+		<div class="columnbox">
+			<div class="accordion">
 				<div>
-					Donec porta malesuada massa, at fermentum nunc tincidunt ac. Integer nisi ligula, sodales bibendum interdum id, sodales sit amet orci. In rhoncus libero in purus vestibulum consequat. Aenean vel purus molestie leo pharetra sagittis. In hac habitasse platea dictumst.
+					<h3><a href="#">First no icons</a></h3>
+					<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
 				</div>
-			</div>
-			<div>
-				<h3><a href="#">Third</a></h3>
 				<div>
-					Mauris tempor urna non quam tincidunt aliquam. Proin venenatis metus eu purus interdum a vehicula ipsum sollicitudin. Mauris sed dignissim odio. Nam id odio sed diam dapibus dignissim. Nulla vestibulum nisl ac magna scelerisque adipiscing. Nam pellentesque sapien vulputate nisi scelerisque ut vehicula orci luctus. Sed rhoncus tempor metus vitae egestas. Proin pharetra tristique justo ac rutrum. Vestibulum ac pharetra dolor. Cras nibh arcu, bibendum eget luctus id, rhoncus nec augue. Integer ornare rhoncus nulla, eu aliquam mi ornare ullamcorper. Praesent egestas auctor orci, non rhoncus sapien eleifend at. Quisque eget purus sem, ut dignissim ligula. Etiam sollicitudin dui libero, id ullamcorper metus. 
+					<h3><a href="#">Second no icons</a></h3>
+					<div>Phasellus mattis tincidunt nibh.</div>
+				</div>
+				<div>
+					<h3><a href="#">Third no icons</a></h3>
+					<div>Nam dui erat, auctor a, dignissim quis.</div>
 				</div>
 			</div>
 		</div>
@@ -209,9 +249,19 @@
 		<h2 class="demoHeaders">Datepicker</h2>
 		<div id="datepicker"></div>
 		
+		<br clear="all" /> <br />
+		
+		<div class="columnbox" style="width: 66%; height: 220px;">
+			<div id="multidatepicker"></div>
+		</div>
+		
+		<br clear="all" />
+		
 		<!-- Progress Bar -->
 		<h2 class="demoHeaders">Progress Bar</h2>
 		<div id="progressbar"></div>
+		<br />
+		<a id="animateProgress" href="#">Animate to random number</a>
 
 		
         <h2 class="demoHeaders">Framework Icons</h2>
@@ -433,6 +483,20 @@
         </ul>
 
       </div>
+	  
+	<h2 class="demoHeaders">Overlay and Shadow Classes <em>(not currently used in UI widgets)</em></h2>
+	<div style="position: relative; width: 70%; height: 200px; padding:1% 4%; overflow:hidden;" class="fakewindowcontain">
+		<p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. </p><p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. </p><p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. </p><p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. </p>
+		
+		<!-- ui-dialog -->
+		<div class="ui-overlay"><div class="ui-widget-overlay"></div><div class="ui-widget-shadow ui-corner-all" style="width: 302px; height: 152px; position: absolute; left: 50px; top: 30px;"></div></div>
+		<div style="position: absolute; width: 280px; height: 130px;left: 50px; top: 30px; padding: 10px;" class="ui-widget ui-widget-content ui-corner-all">
+			<div class="ui-dialog-content ui-widget-content" style="background: none; border: 0;">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+
+	</div>
 	  
 	</body>
 </html>
