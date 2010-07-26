@@ -295,8 +295,8 @@
 .ui-accordion .ui-accordion-header.ui-state-hover, .ui-accordion h3.ui-state-default { border-color: #aaaaaa; }
 .ui-accordion .ui-accordion-header.ui-state-active a { color:#1c4257; }
 .ui-accordion .ui-accordion-header .ui-icon { background: url(images/icon_sprite.png); }
-.ui-accordion .ui-state-active .ui-icon { background-position: 0px -64px; }
-.ui-accordion .ui-state-default .ui-icon { background-position: -16px -80px; }
+.ui-accordion .ui-accordion-header.ui-state-active .ui-icon { background-position: 0px -64px; }
+.ui-accordion .ui-accordion-header.ui-state-default .ui-icon { background-position: -16px -80px; }
 .ui-accordion .ui-accordion-li-fix { display: inline; }
 .ui-accordion .ui-accordion-header-active { border-bottom: 0 !important; }
 .ui-accordion .ui-accordion-header a { display: block; font-size: 12px; padding: .5em .5em .5em .7em; font-weight: bold; color:#4f4f4f; text-shadow: 0px 1px 0px rgba(255,255,255,0.7); }
