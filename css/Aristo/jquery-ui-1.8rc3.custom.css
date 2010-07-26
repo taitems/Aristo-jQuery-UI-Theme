@@ -441,9 +441,9 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .ui-tabs .ui-tabs-panel { display: block; border: 0; padding: 1em 1.4em; background: none; font-size: 12px; border-color: #a8a8a8; border-width: 0px 1px 1px 1px; border-style: solid; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;}
 .ui-tabs .ui-tabs-hide { display: none !important; }
-.ui-tabs .ui-state-default { background: #cccccc url(images/button_bg.png) 0px 0px repeat-x; border-color: #a8a8a8; }
-	.ui-tabs .ui-state-default a { color: #4f4f4f !important; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); }
-.ui-tabs .ui-state-active { background: #FFFFFF; }
+.ui-tabs .ui-tabs-nav li.ui-state-default { background: #cccccc url(images/button_bg.png) 0px 0px repeat-x; border-color: #a8a8a8; }
+.ui-tabs .ui-tabs-nav li.ui-state-default a { color: #4f4f4f !important; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); }
+.ui-tabs .ui-tabs-nav li.ui-state-active { background: #FFFFFF; }
 .ui-tabs-panel .ui-button { border-width: 0px; background: transparent; }
 
 /* === Datepicker === */
