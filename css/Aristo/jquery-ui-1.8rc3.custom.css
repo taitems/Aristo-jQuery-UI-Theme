@@ -403,7 +403,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: 6px; top: 50%; width: 16px; margin: -9px 0 0 0; height: 16px; }
 .ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; background: url(images/icon_sprite.png) 0px -16px no-repeat; }
 .ui-dialog-titlebar .ui-state-hover { -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; border: 0px none; background: transparent; }
-.ui-dialog .ui-state-hover span { background-position: -16px -16px ; }
+.ui-dialog .ui-dialog-titlebar-close.ui-state-hover span { background-position: -16px -16px ; }
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
 .ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; font-size: 12px; }
 .ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
