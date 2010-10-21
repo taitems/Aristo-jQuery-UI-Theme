@@ -39,11 +39,12 @@
 
 
 
+
 /* === Component containers === */
-.ui-widget { font-family: Helvetica, Arial, sans-serif; outline: none;}
+.ui-widget { font-family: Tahoma, Arial, Verdana; outline: none;}
 .ui-widget a { outline: none; }
-.ui-widget .ui-widget { font-size: 1em; }
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Helvetica, Arial, sans-serif; font-size: 1em; }
+.ui-widget .ui-widget { font-size: 11px; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Tahoma, Arial, sans-serif; font-size: 11px; }
 .ui-widget-content { border: 1px solid #dddddd; color: #333333; background: #FFFFFF; }
 .ui-widget-content a { color: #333333; }
 .ui-widget-header { border: 1px solid #8ab0c6; background: #a7cfe6; color: #ffffff; font-weight: bold; }
@@ -348,8 +349,8 @@
 .ui-button { display: inline-block;  position: relative; padding: 0; margin-right: .1em; text-decoration: none !important; cursor: pointer; text-align: center; zoom: 1; overflow: visible; border: 0px none !important; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; } /* the overflow property removes extra width in IE */
 .ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
 button.ui-button-icon-only { width: 2.4em; } /* button elements seem to need a little more width */
-.ui-button-icons-only { width: 3em; } 
-button.ui-button-icons-only { width: 3.2em; } 
+.ui-button-icons-only { width: 3.4em; } 
+button.ui-button-icons-only { width: 3.7em; } 
 .ui-button span { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid; }
 
 
@@ -366,21 +367,24 @@ input.ui-button:active { background: url(images/button_bg.png) 0px bottom repeat
 .ui-state-active .ui-button-text { background: url(images/button_bg.png) 0px bottom repeat-x !important; color: #4f4f4f; border-color: #b6b6b6; }
 
 /*button text element */
-.ui-button .ui-button-text { display: block; line-height: 1.4; font-weight: bold; font-size: 14px; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); }
-.ui-button-text-only .ui-button-text { padding: 5px 12px; }
-.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text { padding: 5px; text-indent: -9999999px; }
-.ui-button-text-icon .ui-button-text, .ui-button-text-icons .ui-button-text { padding: 5px 12px 5px 25px; }
-.ui-button-text-icons .ui-button-text { padding-right: 1.8em; }
+.ui-button .ui-button-text { display: block; line-height: 1.4; font-weight: bold; font-size: 12px; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); }
+.ui-button-text-only .ui-button-text { padding: .4em 1em; }
+.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text { padding: .4em; text-indent: -9999999px; }
+.ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 1em .4em 2.1em; }
+.ui-button-text-icon-secondary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
+.ui-button-text-icons .ui-button-text { padding-left: 2.1em; padding-right: 2.1em; }
 /* no icon support for input elements, provide padding by default */
 input.ui-button { padding: .4em 1em; }
 
 /*button icon element(s) */
 .ui-button .ui-icon { border: 0px none; }
-.ui-button-icon-only .ui-icon, .ui-button-text-icon .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { position: absolute; top: 50%; margin-top: -8px; margin-left: 6px; }
-.ui-button-icon-only .ui-icon { left: 50%; margin-left: -8px; }
-.ui-button-text-icon .ui-icon-primary, .ui-button-text-icons .ui-icon-primary, .ui-button-icons-only .ui-icon-primary { left: .5em; }
-.ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { position: absolute; top: 50%; margin-top: -8px; }
 
+
+.ui-button-icon-only .ui-icon { left: 50%; margin-left: -8px; }
+.ui-button-text-icon-primary .ui-button-icon-primary, .ui-button-text-icons .ui-button-icon-primary, .ui-button-icons-only .ui-button-icon-primary { left: .5em; }
+.ui-button-text-icon-secondary .ui-button-icon-secondary, .ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
+.ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
 /*button sets*/
 .ui-buttonset { margin-right: 7px; }
 .ui-buttonset .ui-button { margin-left: 0; margin-right: -.3em; }
@@ -388,6 +392,7 @@ input.ui-button { padding: .4em 1em; }
 .ui-corner-left .ui-button-text { -moz-border-radius-topleft: 4px !important; -webkit-border-top-left-radius: 4px !important; border-top-left-radius: 4px !important; -moz-border-radius-bottomleft: 4px !important; -webkit-border-bottom-left-radius: 4px !important; border-bottom-left-radius: 4px !important; }
 .ui-corner-right .ui-button-text { -moz-border-radius-topright: 4px !important; -webkit-border-top-right-radius: 4px !important; border-top-right-radius: 4px !important; -moz-border-radius-bottomright: 4px !important; -webkit-border-bottom-right-radius: 4px !important; border-bottom-right-radius: 4px !important; }
 .ui-buttonset .ui-state-active .ui-button-text { cursor: default; background: url(images/button_bg.png) 0px -33px repeat-x !important; color: #1c4257; border-color: #7096ab; -moz-box-shadow: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; }
+
 
 /* workarounds */
 button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */
@@ -399,7 +404,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 /* === Dialog === */
 .ui-dialog { position: absolute; padding: 0; width: 300px; overflow: hidden; background: #FFFFFF; -moz-box-shadow: 0px 5px 8px rgba(0,0,0,0.8); -webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.8); box-shadow: 0px 5px 8px rgba(0,0,0,0.8); }
 .ui-dialog .ui-dialog-titlebar { padding: .5em 1em .3em; position: relative; border-width: 0px 0px 1px 0px; border-color: #979797; background: url(images/the_gradient.gif) 0px 0px repeat-x; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; }
-.ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .2em 0; font-size: 13px; color: #000000; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); } 
+.ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .2em 0; font-size: 12px; color: #000000; text-shadow: 0px 1px 0px rgba(255,255,255,0.8); } 
 .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: 6px; top: 50%; width: 16px; margin: -9px 0 0 0; height: 16px; }
 .ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; background: url(images/icon_sprite.png) 0px -16px no-repeat; }
 .ui-dialog-titlebar .ui-state-hover { -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; border: 0px none; background: transparent; }
@@ -407,6 +412,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
 .ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; font-size: 12px; }
 .ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
 .ui-dialog .ui-dialog-buttonpane button { float: right; margin: .5em .4em .5em 0; cursor: pointer; padding: .2em .6em .3em .6em; line-height: 1.4em; width:auto; overflow:visible; background: transparent !important; border: 0px none; }
 .ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
 .ui-draggable .ui-dialog-titlebar { cursor: move; }
