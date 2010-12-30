@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>jQuery UI Example Page</title>
-		<link type="text/css" href="css/Aristo/jquery-ui-1.8.5.custom.css" rel="stylesheet" />	
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+		<link type="text/css" href="css/Aristo/jquery-ui-1.8.7.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 			
@@ -44,16 +44,7 @@
 				});
 
 				// Datepicker
-				$('#datepicker').datepicker({
-					inline: true
-				});
-				
-				// Multi-date picker
-				$('#multidatepicker').datepicker({
-					numberOfMonths: 3,
-					showButtonPanel: true,
-					inline: true
-				});
+				$('#datepicker').datepicker().children().show();
 				
 				// Horizontal Slider
 				$('#horizSlider').slider({
@@ -116,6 +107,9 @@
 					icons: {primary: 'ui-icon-wrench'}
 				});
 				
+				// Nested button tests
+				$("#nestedButtonTest_1, #nestedButtonTest_2").button();
+				
 			});
 		</script>
 		<style type="text/css">
@@ -126,7 +120,8 @@
 			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
 			ul#icons span.ui-icon {float: left; margin: 0 4px;}
 			.columnbox { height: 170px; width: 48%; float:left; margin-right: 1%; }
-			#eq span { 	height:120px; float:left; margin:15px 	}
+			#eq span { height: 120px; float: left; margin: 15px; }
+			#countries { width: 300px; }
 		</style>	
 	</head>
 	<body>
@@ -183,14 +178,14 @@
 		<h2 class="demoHeaders">Highlight / Error</h2>
 		<div class="ui-widget">
 			<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
-				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .7em;"></span>
 				<strong>Did you know:</strong> Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </p>
 			</div>
 		</div>
 		<br/>
 		<div class="ui-widget">
 			<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;"> 
-				<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
+				<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .7em;"></span> 
 				<strong>Error:</strong> Needs more cowbell. </p>
 			</div>
 		</div>
@@ -255,14 +250,6 @@
 		<!-- Datepicker -->
 		<h2 class="demoHeaders">Datepicker</h2>
 		<div id="datepicker"></div>
-		
-		<br clear="all" /> <br />
-		
-		<div class="columnbox" style="width: 66%; height: 220px;">
-			<div id="multidatepicker"></div>
-		</div>
-		
-		<br clear="all" />
 		
 		<!-- Progress Bar -->
 		<h2 class="demoHeaders">Progress Bar</h2>
@@ -514,7 +501,7 @@
 				</ul>
 				<div id="tabs2-1">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
-					<a href="#" class="uibutton ui-icon-gear">Change</a>
+					<a href="#" id="nestedButtonTest_1">Change</a>
 				</div>
 				<div id="tabs2-2">Tab 2</div>
 				<div id="tabs2-3">Tab 3</div>
@@ -526,7 +513,7 @@
 					<h4><a href="#">First</a></h4>
 					<div>
 						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-						<a href="#" class="uibutton">Change</a>
+						<a href="#" id="nestedButtonTest_2">Change</a>
 					</div>
 				</div>
 				<div>
