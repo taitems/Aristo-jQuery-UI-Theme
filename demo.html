@@ -4,8 +4,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>jQuery UI Example Page</title>
 		<link type="text/css" href="css/Aristo/jquery-ui-1.8.7.custom.css" rel="stylesheet" />	
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 			
@@ -103,22 +103,24 @@
 				// Combinations
 				$('#tabs2').tabs();
 				$("#accordion2").accordion({ header: "h4" });
-				$(".uibutton").button({
+				$("#buttonInModal").button({
 					icons: {primary: 'ui-icon-wrench'}
 				});
 				
 				// Nested button tests
-				$("#nestedButtonTest_1, #nestedButtonTest_2").button();
+				$("#nestedButtonTest_1, #nestedButtonTest_2, #buttonInModal").button().click(function(e) {
+					e.preventDefault();
+				});
 				
 			});
 		</script>
 		<style type="text/css">
 			/*demo page css*/
-			body{ font: 62.5% Cambria,Georgia,serif; margin: 50px;}
+			body{ font: 62.5% Cambria, Georgia, serif; margin: 50px;}
 			.demoHeaders { margin-top: 2em; }
-			ul#icons {margin: 0; padding: 0;}
-			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
-			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+			ul#icons { margin: 0; padding: 0;}
+			ul#icons li { margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left; list-style: none; }
+			ul#icons span.ui-icon { float: left; margin: 0 4px; }
 			.columnbox { height: 170px; width: 48%; float:left; margin-right: 1%; }
 			#eq span { height: 120px; float: left; margin: 15px; }
 			#countries { width: 300px; }
@@ -244,7 +246,8 @@
 
 		<!-- ui-dialog -->
 		<div id="dialog" title="Dialog Title">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><a href="#" class="uibutton">Change</a>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<a href="#" id="buttonInModal" class="uibutton">Change</a>
 		</div>
 	
 		<!-- Datepicker -->
@@ -492,40 +495,64 @@
 
 	</div>
 	<h2 class="demoHeaders">Combination examples</h2>
-		<div class="columnbox">
-			<div id="tabs2">
-				<ul>
-					<li><a href="#tabs2-1">First</a></li>
-					<li><a href="#tabs2-2">Second</a></li>
-					<li><a href="#tabs2-3">Third</a></li>
-				</ul>
-				<div id="tabs2-1">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
-					<a href="#" id="nestedButtonTest_1">Change</a>
-				</div>
-				<div id="tabs2-2">Tab 2</div>
-				<div id="tabs2-3">Tab 3</div>
+	<div class="columnbox">
+		<div id="tabs2">
+			<ul>
+				<li><a href="#tabs2-1">First</a></li>
+				<li><a href="#tabs2-2">Second</a></li>
+				<li><a href="#tabs2-3">Third</a></li>
+			</ul>
+			<div id="tabs2-1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat. Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna.</p>
+				<a href="#" id="nestedButtonTest_1">Change</a>
 			</div>
+			<div id="tabs2-2">Tab 2</div>
+			<div id="tabs2-3">Tab 3</div>
 		</div>
-		<div class="columnbox">
-			<div id="accordion2">
+	</div>
+	<div class="columnbox">
+		<div id="accordion2">
+			<div>
+				<h4><a href="#">First</a></h4>
 				<div>
-					<h4><a href="#">First</a></h4>
-					<div>
-						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-						<a href="#" id="nestedButtonTest_2">Change</a>
-					</div>
-				</div>
-				<div>
-					<h4><a href="#">Second</a></h4>
-					<div>Phasellus mattis tincidunt nibh.</div>
-				</div>
-				<div>
-					<h4><a href="#">Third</a></h4>
-					<div>Mauris tempor urna non quam tincidunt aliquam. Proin venenatis metus eu purus interdum a vehicula ipsum sollicitudin. Mauris sed dignissim odio. Nam id odio sed diam dapibus dignissim. Nulla vestibulum nisl ac magna scelerisque adipiscing. Nam pellentesque sapien vulputate nisi scelerisque ut vehicula orci luctus. Sed rhoncus tempor metus vitae egestas. Proin pharetra tristique justo ac rutrum. Vestibulum ac pharetra dolor. Cras nibh arcu, bibendum eget luctus id, rhoncus nec augue. Integer ornare rhoncus nulla, eu aliquam mi ornare ullamcorper. Praesent egestas auctor orci, non rhoncus sapien eleifend at. Quisque eget purus sem, ut dignissim ligula. Etiam sollicitudin dui libero, id ullamcorper metus. </div>
+					<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+					<a href="#" id="nestedButtonTest_2">Change</a>
 				</div>
 			</div>
+			<div>
+				<h4><a href="#">Second</a></h4>
+				<div>Phasellus mattis tincidunt nibh.</div>
+			</div>
+			<div>
+				<h4><a href="#">Third</a></h4>
+				<div>Mauris tempor urna non quam tincidunt aliquam. Proin venenatis metus eu purus interdum a vehicula ipsum sollicitudin. Mauris sed dignissim odio. Nam id odio sed diam dapibus dignissim. Nulla vestibulum nisl ac magna scelerisque adipiscing. Nam pellentesque sapien vulputate nisi scelerisque ut vehicula orci luctus. Sed rhoncus tempor metus vitae egestas. Proin pharetra tristique justo ac rutrum. Vestibulum ac pharetra dolor. Cras nibh arcu, bibendum eget luctus id, rhoncus nec augue. Integer ornare rhoncus nulla, eu aliquam mi ornare ullamcorper. Praesent egestas auctor orci, non rhoncus sapien eleifend at. Quisque eget purus sem, ut dignissim ligula. Etiam sollicitudin dui libero, id ullamcorper metus. </div>
+			</div>
 		</div>
+	</div>
+	
+	<div style="clear:both;">&nbsp;</div>
+		
+	<h2 class="demoHeaders">Common Input Fields</h2>
+	<p>
+		<strong>Input (type: 'text')</strong><br />
+		<input type="text" />
+	</p>
+	<p>
+		<strong>Input (type: 'email' and 'password')</strong><br />
+		<input type="email" /><input type="password" />
+	</p>
+	<p>
+		<strong>Text Area</strong><br />
+		<textarea cols="30"></textarea>
+	</p>
+	<p>
+		<strong>Other Inputs Remain Fine</strong><br />
+		<input type="radio" /> <br />
+		<input type="checkbox" /> <br />
+		<input type="file" /> <br />
+	</p>
+	
+	
 
 	</body>
 </html>
