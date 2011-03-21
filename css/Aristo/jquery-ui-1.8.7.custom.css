@@ -401,7 +401,7 @@
  * http://docs.jquery.com/UI/Autocomplete#theming
  */
 .ui-autocomplete {
-	position: absolute; cursor: default;
+	position: absolute; cursor: default; z-index: 3 !important;
 	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
 	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
@@ -463,11 +463,18 @@
  *
  * http://docs.jquery.com/UI/Button#theming
  */
-.ui-button { display: inline-block; position: relative; padding: 0; margin-right: .1em; text-decoration: none !important; cursor: pointer; text-align: center; zoom: 1; overflow: visible; } /* the overflow property removes extra width in IE */
+.ui-button { display: inline-block; position: relative; padding: 0; margin-right: .1em; text-decoration: none !important; cursor: pointer; text-align: center; zoom: 1; overflow: visible; -webkit-user-select: none; -moz-user-select: none; user-select: none; } /* the overflow property removes extra width in IE */
 .ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
 button.ui-button-icon-only { width: 2.4em; } /* button elements seem to need a little more width */
 .ui-button-icons-only { width: 3.4em; } 
 button.ui-button-icons-only { width: 3.7em; } 
+
+/* button animation properties */
+.ui-button {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
 
 /*states*/
 .ui-button.ui-state-hover { 
@@ -699,5 +706,33 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  *
  * http://docs.jquery.com/UI/Progressbar#theming
  */
-.ui-progressbar { height: 12px; text-align: left; background: url(images/progress_bar.gif) 0 -14px repeat-x; }
+.ui-progressbar { height: 12px; text-align: left; background: #FFF url(images/progress_bar.gif) 0 -14px repeat-x; }
 .ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; background: url(images/progress_bar.gif) 0 0 repeat-x; }
+
+/* Extra Input Field Styling */
+textarea, input:not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+	padding: 3px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #cecece;
+	outline: none;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25 ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+textarea:hover, input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):hover {
+	border: 1px solid #bdbdbd;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
+}
+textarea:focus, input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus {
+	border: 1px solid #95bdd4;
+	-webkit-box-shadow: 0 2px 3px rgba(161,202,226,0.5) inset, 0 1px 0 rgba(255,255,255,0.2);
+	-moz-box-shadow: 0 2px 3px rgba(161,202,226,0.5) inset, 0 1px 0 rgba(255,255,255,0.2);
+	box-shadow: 0 2px 3px rgba(161,202,226,0.5) inset, 0 1px 0 rgba(255,255,255,0.2);
+}
