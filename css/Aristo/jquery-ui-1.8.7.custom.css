@@ -473,9 +473,9 @@ button.ui-button-icons-only { width: 3.7em; }
 
 /* button animation properties */
 .ui-button {
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
+    -moz-transition: -moz-box-shadow 0.25s ease-in-out;
+    -o-transition: -o-box-shadow 0.25s ease-in-out;
 }
 
 /*states*/
@@ -488,21 +488,21 @@ button.ui-button-icons-only { width: 3.7em; }
 	outline: none;
 	color: #1c4257; border-color: #7096ab;
 	background: url(images/bg_fallback.png) 0 -50px repeat-x;
-	background-image: -webkit-gradient(
+	background: -webkit-gradient(
 		linear,
 		left bottom,
 		left top,
 		color-stop(1, rgb(185,224,245)),
 		color-stop(0, rgb(146,189,214))
 	);
-	background-image: -moz-linear-gradient(
+	background: -moz-linear-gradient(
 		center top,
 		rgb(185,224,245),
 		rgb(146,189,214)
 	);
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255,255,255,0.8) inset; 
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255,255,255,0.8) inset;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255,255,255,0.8) inset;
 }
  
 /*button text element */
@@ -513,7 +513,7 @@ button.ui-button-icons-only { width: 3.7em; }
 .ui-button-text-icon-secondary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
 .ui-button-text-icons .ui-button-text { padding-left: 2.1em; padding-right: 2.1em; }
 /* no icon support for input elements, provide padding by default */
-input.ui-button[type="submit"] { font-size: 14px; font-weight: bold; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); padding: 0 1em !important; height: 33px; }
+input.ui-button { font-size: 14px; font-weight: bold; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); padding: 0 1em !important; height: 33px; }
 /*remove submit button internal padding in Firefox*/ 
 input.ui-button::-moz-focus-inner { 
     border: 0;
@@ -522,7 +522,7 @@ input.ui-button::-moz-focus-inner {
 /* fix webkits handling of the box model */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	input.ui-button[type="submit"] {
-		height: 31px;
+		height: 31px !important;
 	}
 }
 
@@ -742,13 +742,13 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     -moz-transition: all 0.25 ease-in-out;
     -o-transition: all 0.25s ease-in-out;
 }
-.ui-form textarea:hover, .ui-form input:not([type="submit"]):not([type="button"])not([type="checkbox"]):not([type="radio"]):not([type="file"]):hover {
+.ui-form textarea:hover, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):hover {
 	border: 1px solid #bdbdbd;
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
 }
-.ui-form textarea:focus, .ui-form input:not([type="submit"]):not([type="button"])not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus {
+.ui-form textarea:focus, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus {
 	border: 1px solid #95bdd4;
 	-webkit-box-shadow: 0 2px 3px rgba(161,202,226,0.5) inset, 0 1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: 0 2px 3px rgba(161,202,226,0.5) inset, 0 1px 0 rgba(255,255,255,0.2);
