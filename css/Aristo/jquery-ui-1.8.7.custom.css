@@ -521,7 +521,7 @@ input.ui-button::-moz-focus-inner {
 }
 /* fix webkits handling of the box model */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-	input.ui-button[type="submit"] {
+	input.ui-button {
 		height: 31px !important;
 	}
 }
