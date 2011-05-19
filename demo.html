@@ -4,8 +4,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>jQuery UI Example Page</title>
 		<link type="text/css" href="css/Aristo/jquery-ui-1.8.7.custom.css" rel="stylesheet" />	
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.8.13/jquery-ui.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 			
@@ -17,7 +17,6 @@
 
 				// Accordion
 				$(".accordion").accordion({ header: "h3" });
-				$(".accordion").last().accordion("option", "icons", false);
 	
 				// Tabs
 				$('#tabs').tabs();
@@ -70,7 +69,7 @@
 				);
 				
 				// Button
-				$("#divButton, #linkButton").button();
+				$("#divButton, #linkButton, #submitButton").button();
 								
 				// Icon Buttons
 				$("#leftIconButton").button({
@@ -121,16 +120,17 @@
 			ul#icons { margin: 0; padding: 0;}
 			ul#icons li { margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left; list-style: none; }
 			ul#icons span.ui-icon { float: left; margin: 0 4px; }
-			.columnbox { height: 170px; width: 48%; float:left; margin-right: 1%; }
+			.columnbox { width: 500px; }
 			#eq span { height: 120px; float: left; margin: 15px; }
 			#countries { width: 300px; }
 		</style>	
 	</head>
-	<body>
-	<h1>"Aristo" for jQuery UI!</h1>
-	<p style="font-size: 1.3em; line-height: 1.5; margin: 1em 0; width: 50%;">
-		This page demonstrates all available components of the jQuery UI port of "Aristo". jQuery and jQuery UI are pulled from the Google CDN. More information can be found at the original <a href="http://taitems.tumblr.com/post/482577430/introducing-aristo-a-jquery-ui-theme" target="_blank">blog post</a>.
-	</p>
+	<body class="ui-form">
+	
+		<h1>"Aristo" for jQuery UI!</h1>
+		<p style="font-size: 1.3em; line-height: 1.5; margin: 1em 0; width: 50%;">
+			This page demonstrates all available components of the jQuery UI port of "Aristo". jQuery and jQuery UI are pulled from the Google CDN. More information can be found at the original <a href="http://taitems.tumblr.com/post/482577430/introducing-aristo-a-jquery-ui-theme" target="_blank">blog post</a>.
+		</p>
 	
 		<!-- Autocomplete -->
 		<h2 class="demoHeaders">Autocomplete</h2>	
@@ -142,7 +142,8 @@
 		<!-- Button -->
 		<h2 class="demoHeaders">UI Button</h2>	
 		<div id="divButton">&lt;DIV&gt; Button</div>
-		<a id="linkButton" href="#">&lt;A href="#"&gt; Button</a>
+		<a id="linkButton" href="#">&lt;A href="#"&gt; Button</a>		
+		<input type="submit" id="submitButton" value="Submit Button" />
 		
 		<!-- Icon Buttons -->
 		<h2 class="demoHeaders">Icon Buttons</h2>
@@ -195,38 +196,60 @@
 		<!-- Accordion -->
 		<h2 class="demoHeaders">Accordion</h2>
 		<div class="columnbox">
+		
 			<div class="accordion">
-				<div>
-					<h3><a href="#">First</a></h3>
-					<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-				</div>
-				<div>
-					<h3><a href="#">Second</a></h3>
-					<div>Phasellus mattis tincidunt nibh.</div>
-				</div>
-				<div>
-					<h3><a href="#">Third</a></h3>
-					<div>Nam dui erat, auctor a, dignissim quis.</div>
-				</div>
+
+					<h3><a href="#">Section 1</a></h3>
+					<div>
+						<p>
+						Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+						ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+						amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+						odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+						</p>
+					</div>
+					<h3><a href="#">Section 2</a></h3>
+					<div>
+						<p>
+						Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+						purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+						velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+						suscipit faucibus urna.
+						</p>
+					</div>
+					<h3><a href="#">Section 3</a></h3>
+					<div>
+						<p>
+						Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+						Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+						ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+						lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+						</p>
+						<ul>
+							<li>List item one</li>
+							<li>List item two</li>
+							<li>List item three</li>
+						</ul>
+					</div>
+					<h3><a href="#">Section 4</a></h3>
+					<div>
+						<p>
+						Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+						et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+						faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+						mauris vel est.
+						</p>
+						<p>
+						Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+						Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+						inceptos himenaeos.
+						</p>
+					</div>
+					
 			</div>
+		
 		</div>
-		<div class="columnbox">
-			<div class="accordion">
-				<div>
-					<h3><a href="#">First no icons</a></h3>
-					<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-				</div>
-				<div>
-					<h3><a href="#">Second no icons</a></h3>
-					<div>Phasellus mattis tincidunt nibh.</div>
-				</div>
-				<div>
-					<h3><a href="#">Third no icons</a></h3>
-					<div>Nam dui erat, auctor a, dignissim quis.</div>
-				</div>
-			</div>
-		</div>
-	
+		
 		<!-- Tabs -->
 		<h2 class="demoHeaders">Tabs</h2>
 		<div id="tabs">
@@ -495,7 +518,7 @@
 
 	</div>
 	<h2 class="demoHeaders">Combination examples</h2>
-	<div class="columnbox">
+	<div class="columnbox" style="height: 200px;">
 		<div id="tabs2">
 			<ul>
 				<li><a href="#tabs2-1">First</a></li>
@@ -510,7 +533,10 @@
 			<div id="tabs2-3">Tab 3</div>
 		</div>
 	</div>
-	<div class="columnbox">
+	
+	<br />
+	
+	<div class="columnbox" style="height: 200px;">
 		<div id="accordion2">
 			<div>
 				<h4><a href="#">First</a></h4>
@@ -550,6 +576,8 @@
 		<input type="radio" /> <br />
 		<input type="checkbox" /> <br />
 		<input type="file" /> <br />
+		<input type="submit" /> <br />
+		<input type="button" value="Button" /> <br />
 	</p>
 	
 	
