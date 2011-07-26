@@ -728,7 +728,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; background: url(images/progress_bar.gif) 0 0 repeat-x; }
 
 /* Extra Input Field Styling */
-.ui-form textarea, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+.ui-form textarea, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]) {
 	padding: 3px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -742,13 +742,13 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     -moz-transition: all 0.25 ease-in-out;
     -o-transition: all 0.25s ease-in-out;
 }
-.ui-form textarea:hover, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):hover {
+.ui-form textarea:hover, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):hover {
 	border: 1px solid #bdbdbd;
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset, 0 1px 0 rgba(255,255,255,0.2);
 }
-.ui-form textarea:focus, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus {
+.ui-form textarea:focus, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):focus {
 	border: 1px solid #95bdd4;
 	-webkit-box-shadow: 0 2px 3px rgba(161,202,226,0.5) inset, 0 1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: 0 2px 3px rgba(161,202,226,0.5) inset, 0 1px 0 rgba(255,255,255,0.2);
