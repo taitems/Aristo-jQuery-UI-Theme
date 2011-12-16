@@ -654,6 +654,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
 .ui-datepicker table .ui-state-highlight { border-color: #5F83B9; }
+.ui-datepicker table .ui-state-hover { background: #5F83B9; color: #FFF; font-weight: bold; text-shadow: 0 1px 1px #234386; }
 .ui-datepicker-calendar .ui-state-default { background: transparent; border-color: #FFF; }
 .ui-datepicker-calendar .ui-state-active { background: #5F83B9; border-color: #5F83B9; color: #FFF; font-weight: bold; text-shadow: 0 1px 1px #234386; }
 
