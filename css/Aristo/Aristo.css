@@ -460,9 +460,10 @@ button.ui-button-icons-only { width: 3.7em; }
 
 /* button animation properties */
 .ui-button {
-    -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
-    -moz-transition: -moz-box-shadow 0.25s ease-in-out;
-    -o-transition: -o-box-shadow 0.25s ease-in-out;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
 /*states*/
@@ -718,9 +719,10 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25 ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 .ui-form textarea:hover, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):hover {
 	border: 1px solid #bdbdbd;
