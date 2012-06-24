@@ -460,9 +460,10 @@ button.ui-button-icons-only { width: 3.7em; }
 
 /* button animation properties */
 .ui-button {
-    -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
-    -moz-transition: -moz-box-shadow 0.25s ease-in-out;
-    -o-transition: -o-box-shadow 0.25s ease-in-out;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
 /*states*/
@@ -495,7 +496,7 @@ button.ui-button-icons-only { width: 3.7em; }
 .ui-button-text-icon-secondary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
 .ui-button-text-icons .ui-button-text { padding-left: 2.1em; padding-right: 2.1em; }
 /* no icon support for input elements, provide padding by default */
-input.ui-button { font-size: 14px; font-weight: bold; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); padding: 0 1em !important; height: 33px; }
+input.ui-button, .ui-widget-content input.ui-button { font-size: 14px; font-weight: bold; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); padding: 0 1em !important; height: 33px; }
 /*remove submit button internal padding in Firefox*/ 
 input.ui-button::-moz-focus-inner { 
     border: 0;
@@ -548,6 +549,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog {
 	-webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.6);
 	-moz-box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+	box-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 .ui-dialog .ui-dialog-titlebar { padding: 0.7em 1em 0.6em 1em; position: relative; border: none; border-bottom: 1px solid #979797; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;  }
 .ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .2em 0; font-size: 14px; text-shadow: 0 1px 0 rgba(255,255,255,0.5); } 
@@ -653,6 +655,8 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
 .ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+.ui-datepicker table .ui-state-highlight { border-color: #5F83B9; }
+.ui-datepicker table .ui-state-hover { background: #5F83B9; color: #FFF; font-weight: bold; text-shadow: 0 1px 1px #234386; -webkit-box-shadow: 0 0px 0 rgba(255,255,255,0.6) inset; -moz-box-shadow: 0 0px 0 rgba(255,255,255,0.6) inset; box-shadow: 0 0px 0 rgba(255,255,255,0.6) inset; border-color: #5F83B9; }
 .ui-datepicker-calendar .ui-state-default { background: transparent; border-color: #FFF; }
 .ui-datepicker-calendar .ui-state-active { background: #5F83B9; border-color: #5F83B9; color: #FFF; font-weight: bold; text-shadow: 0 1px 1px #234386; }
 
@@ -715,9 +719,10 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.2);
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25 ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 .ui-form textarea:hover, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):hover {
 	border: 1px solid #bdbdbd;
