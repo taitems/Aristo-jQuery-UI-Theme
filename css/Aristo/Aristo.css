@@ -566,6 +566,27 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
 .ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
 .ui-draggable .ui-dialog-titlebar { cursor: move; }
+
+.ui-dialog .ui-dialog-titlebar-plus { position: absolute; right: .8em; top: 55%; width: 16px; margin: -10px 0 0 0; padding: 0; height: 16px; background: url(images/icon_sprite.png) 0 -96px no-repeat; border: 0 none; }
+.ui-dialog .ui-dialog-titlebar-plus { -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition: none; -moz-transition: none; transition: none; }
+.ui-dialog .ui-dialog-titlebar-plus span { display: none; }
+.ui-dialog .ui-dialog-titlebar-plus:hover { background-position: -16px -96px; }
+.ui-dialog .ui-dialog-titlebar-plus:hover, .ui-dialog .ui-dialog-titlebar-plus:focus { padding: 0; border: 0; }
+
+.ui-dialog .ui-dialog-titlebar-minus { position: absolute; right: .8em; top: 55%; width: 16px; margin: -10px 0 0 0; padding: 0; height: 16px; background: url(images/icon_sprite.png) 0 -112px no-repeat; border: 0 none; }
+.ui-dialog .ui-dialog-titlebar-minus { -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition: none; -moz-transition: none; transition: none; }
+.ui-dialog .ui-dialog-titlebar-minus span { display: none; }
+.ui-dialog .ui-dialog-titlebar-minus:hover { background-position: -16px -112px; }
+.ui-dialog .ui-dialog-titlebar-minus:hover, .ui-dialog .ui-dialog-titlebar-minus:focus { padding: 0; border: 0; }
+
+.ui-dialog .ui-dialog-titlebar-link { position: absolute; right: .8em; top: 55%; width: 16px; margin: -10px 0 0 0; padding: 0; height: 16px; background: url(images/icon_sprite.png) 0 -128px no-repeat; border: 0 none; }
+.ui-dialog .ui-dialog-titlebar-link { -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; -webkit-transition: none; -moz-transition: none; transition: none; }
+.ui-dialog .ui-dialog-titlebar-link span { display: none; }
+.ui-dialog .ui-dialog-titlebar-link:hover { background-position: -16px -128px; }
+.ui-dialog .ui-dialog-titlebar-link:hover, .ui-dialog .ui-dialog-titlebar-link:focus { padding: 0; border: 0; }
+
+
+
 /*
  * jQuery UI Slider 1.8.7
  *
