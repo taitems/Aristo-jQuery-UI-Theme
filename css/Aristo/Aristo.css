@@ -708,8 +708,27 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  *
  * http://docs.jquery.com/UI/Progressbar#theming
  */
-.ui-progressbar { height: 12px; text-align: left; background: #FFF url(images/progress_bar.gif) 0 -14px repeat-x; }
-.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; background: url(images/progress_bar.gif) 0 0 repeat-x; }
+.ui-progressbar { 
+	height: 12px; 
+	text-align: left; 
+	background: #FFF url(images/progress_bar.gif) 0 -14px repeat-x; 
+}
+
+.ui-progressbar .ui-progressbar-value {
+	margin: -1px; 
+	height:100%; 
+	background: url(images/progress_bar.gif) 0 0 repeat-x; 
+}
+
+.ui-progressbar .ui-progressbar-overlay {
+	background: url("images/animated-overlay.gif");
+	height: 100%;
+	filter: alpha(opacity=20);
+	opacity: 0.20;
+}
+.ui-progressbar-indeterminate .ui-progressbar-value {
+	background: url(images/indeterminate.png) 0 0 repeat-x; 
+}
 
 /* Extra Input Field Styling */
 .ui-form textarea, .ui-form input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]) {
