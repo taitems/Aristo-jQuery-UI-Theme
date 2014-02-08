@@ -1,3 +1,6 @@
+!This is a fork of the Aristo jQuery UI theme in which I have added support for indeterminate progress bars.
+
+
 [View Demo](http://taitems.github.com/Aristo-jQuery-UI-Theme/)
 =====================
 
