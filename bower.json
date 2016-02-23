@@ -1,0 +1,27 @@
+{
+    "name": "aristo",
+    "description": "Aristo Theme for JQuery UI",
+    "main": "index.js",
+    "authors": [
+        "Tait Brown <taitbrown@gmail.com>"
+    ],
+    "homepage": "http://taitems.github.io/Aristo-jQuery-UI-Theme/",
+    "moduleType": [],
+    "license": "Dual licensed under the MIT or GPL Version 2 licenses.",
+    "keywords": [
+        "jquery",
+        "jquery-ui",
+        "aristo"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/axial/Aristo-jQuery-UI-Theme"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
